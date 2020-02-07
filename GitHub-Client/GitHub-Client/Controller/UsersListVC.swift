@@ -8,15 +8,14 @@
 
 import UIKit
 import Kingfisher
-
+/**
 class UsersListViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     var users = [User]()
     
     private let myActivityIndicator = UIActivityIndicatorView(style: .medium)
-    let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,11 +50,11 @@ extension UsersListViewController {
     }
     
     private func isLastCell(indexPath: IndexPath) -> Bool {
-            if users.count > 1 {
-                if indexPath.row == users.count - 1 {
-                    return true
-                }
+        if users.count > 1 {
+            if indexPath.row == users.count - 1 {
+                return true
             }
+        }
         return false
     }
 }
@@ -72,7 +71,7 @@ extension UsersListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
+        
         if isLastCell(indexPath: indexPath) {
             loadUsersData()
         }
@@ -93,10 +92,11 @@ extension UsersListViewController: UITableViewDataSource, UITableViewDelegate {
                     progressBlock: nil)
             } else {
                 cell.avatarImage.image = UIImage(named: "avatar.png")
-                }
+            }
             cell.loginLabel?.text = self.users[indexPath.row].login
         }
         return cell
     }
     
 }
+**/

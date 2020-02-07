@@ -8,33 +8,35 @@
 
 import Foundation
 
-class NetworkService {
+protocol NetworkServiceProtocol {
+    func loadUsersData(since: Int, completion: @escaping (Result<[User]? , Error>) -> Void)
+}
+
+class NetworkService: NetworkServiceProtocol {
     
-     static var users = [User]()
-     static let baseURL = "https://api.github.com/users?since="
-     static var lastIndexId = 0
-     
-     static func loadUsersData(completion: @escaping (_ users: [User]) -> ()) {
+    let baseURL = "https://api.github.com/users?since="
+    
+    func loadUsersData(since: Int, completion: @escaping (Result<[User]? , Error>) -> Void) {
         
-         guard let url = URL(string: baseURL + String(lastIndexId)) else { return}
-         URLSession.shared.dataTask(with: url) { (data, response, error) in
-             if error != nil {
-                 print(error?.localizedDescription ?? "")
-             }
-             
-             guard let data = data else { return }
-             do {
-                 let decoder = JSONDecoder()
-                 decoder.keyDecodingStrategy = .convertFromSnakeCase
-                 let loadedUsers = try decoder.decode([User].self, from: data)
-                 users.append(contentsOf: loadedUsers)
-                 guard let lastIndexId = loadedUsers.last?.id else { return }
-                 self.lastIndexId = lastIndexId
-                 completion(users)
-             } catch let error {
-                 print(error)
-             }
-             }.resume()
-     }
+        guard let url = URL(string: baseURL + String(since)) else { return}
+        
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            
+            guard let data = data else { return }
+            
+            do {
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                let loadedUsers = try decoder.decode([User].self, from: data)
+                completion(.success(loadedUsers))
+            } catch let error{
+                completion(.failure(error))
+            }
+        }.resume()
+    }
     
 }
