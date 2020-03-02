@@ -9,24 +9,28 @@
 import Foundation
 
 protocol UsersListPresenterProtocol: class {
-    init(view: UsersListViewProtocol, networkService: NetworkServiceProtocol)
+    init(view: UsersListViewProtocol, networkService: NetworkServiceProtocol, router: RouterProtocol)
     var countOfUsers: Int { get }
     func usersListViewDidLoad()
     func getUsersList()
     func configure(_ cell: UsersListCellProtocol, forRow row: Int)
     func isLastCell(indexPath: IndexPath)
+    func getLogin(indexPath: IndexPath) -> String
+    func tapOnTheUser(login: String)
 }
 
 class UsersListPresenter: UsersListPresenterProtocol {
 
     weak var view: UsersListViewProtocol?
     let networkService: NetworkServiceProtocol!
+    var router: RouterProtocol?
     private var users: [User] = []
     private var lastIndexId = 0
     
-    required init(view: UsersListViewProtocol, networkService: NetworkServiceProtocol) {
+    required init(view: UsersListViewProtocol, networkService: NetworkServiceProtocol, router: RouterProtocol) {
         self.view = view
         self.networkService = networkService
+        self.router = router
         getUsersList()
     }
     
@@ -67,6 +71,14 @@ class UsersListPresenter: UsersListPresenterProtocol {
         let login = users[row].login
         let avatarUrl = users[row].avatarUrl
         cell.setUser(login: login, avatarURL: avatarUrl)
+    }
+    
+    func getLogin(indexPath: IndexPath) -> String {
+        return users[indexPath.row].login
+    }
+    
+    func tapOnTheUser(login: String) {
+        router?.showDetail(login: login)
     }
     
 }

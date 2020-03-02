@@ -12,13 +12,19 @@
 		A5276E5B23EC3D66002272B0 /* UsersListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5276E5A23EC3D66002272B0 /* UsersListPresenter.swift */; };
 		A5276E5D23EC46AC002272B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5276E5C23EC46AC002272B0 /* Main.storyboard */; };
 		A5276E6023EC54AB002272B0 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5276E5F23EC54AB002272B0 /* ModuleBuilder.swift */; };
+		A52CD72923FE846400F23118 /* DetailUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52CD72823FE846400F23118 /* DetailUser.swift */; };
+		A52CD72C23FE867500F23118 /* DetailUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52CD72A23FE867500F23118 /* DetailUserViewController.swift */; };
+		A52CD72D23FE867500F23118 /* DetailUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A52CD72B23FE867500F23118 /* DetailUserViewController.xib */; };
+		A52CD72F23FE87FE00F23118 /* DetailUserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52CD72E23FE87FE00F23118 /* DetailUserPresenter.swift */; };
+		A52CD73423FE8FEB00F23118 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52CD73323FE8FEB00F23118 /* Router.swift */; };
 		A532EB8123DF0B47002E99B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A532EB8023DF0B47002E99B8 /* AppDelegate.swift */; };
 		A532EB8323DF0B47002E99B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A532EB8223DF0B47002E99B8 /* SceneDelegate.swift */; };
 		A532EB8A23DF0B4A002E99B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A532EB8923DF0B4A002E99B8 /* Assets.xcassets */; };
 		A532EB8D23DF0B4A002E99B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A532EB8B23DF0B4A002E99B8 /* LaunchScreen.storyboard */; };
+		A53E6C0F24090E1E000958A0 /* DetailUserViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53E6C0D24090E1E000958A0 /* DetailUserViewController2.swift */; };
+		A53E6C1024090E1E000958A0 /* DetailUserViewController2.xib in Resources */ = {isa = PBXBuildFile; fileRef = A53E6C0E24090E1E000958A0 /* DetailUserViewController2.xib */; };
 		A5F5607623DF25FC00EC2418 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F5607523DF25FC00EC2418 /* NetworkService.swift */; };
 		A5F5607823DF268000EC2418 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F5607723DF268000EC2418 /* User.swift */; };
-		A5F5607D23DF2BAF00EC2418 /* UsersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F5607C23DF2BAF00EC2418 /* UsersListVC.swift */; };
 		A5F5608023DF2D5000EC2418 /* UserslListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F5607E23DF2D5000EC2418 /* UserslListTableViewCell.swift */; };
 		A5F5608123DF2D5000EC2418 /* UserslListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F5607F23DF2D5000EC2418 /* UserslListTableViewCell.xib */; };
 		A5F5608A23DF40C400EC2418 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F5608923DF40C400EC2418 /* Kingfisher.framework */; };
@@ -47,15 +53,21 @@
 		A5276E5A23EC3D66002272B0 /* UsersListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListPresenter.swift; sourceTree = "<group>"; };
 		A5276E5C23EC46AC002272B0 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A5276E5F23EC54AB002272B0 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
+		A52CD72823FE846400F23118 /* DetailUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUser.swift; sourceTree = "<group>"; };
+		A52CD72A23FE867500F23118 /* DetailUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUserViewController.swift; sourceTree = "<group>"; };
+		A52CD72B23FE867500F23118 /* DetailUserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailUserViewController.xib; sourceTree = "<group>"; };
+		A52CD72E23FE87FE00F23118 /* DetailUserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUserPresenter.swift; sourceTree = "<group>"; };
+		A52CD73323FE8FEB00F23118 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		A532EB7D23DF0B47002E99B8 /* GitHub-Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GitHub-Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A532EB8023DF0B47002E99B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A532EB8223DF0B47002E99B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A532EB8923DF0B4A002E99B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A532EB8C23DF0B4A002E99B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A532EB8E23DF0B4A002E99B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A53E6C0D24090E1E000958A0 /* DetailUserViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUserViewController2.swift; sourceTree = "<group>"; };
+		A53E6C0E24090E1E000958A0 /* DetailUserViewController2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailUserViewController2.xib; sourceTree = "<group>"; };
 		A5F5607523DF25FC00EC2418 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		A5F5607723DF268000EC2418 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		A5F5607C23DF2BAF00EC2418 /* UsersListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListVC.swift; sourceTree = "<group>"; };
 		A5F5607E23DF2D5000EC2418 /* UserslListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserslListTableViewCell.swift; sourceTree = "<group>"; };
 		A5F5607F23DF2D5000EC2418 /* UserslListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserslListTableViewCell.xib; sourceTree = "<group>"; };
 		A5F5608223DF391100EC2418 /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +131,51 @@
 			path = Builder;
 			sourceTree = "<group>";
 		};
+		A52CD72423FE834C00F23118 /* DetailUserModule */ = {
+			isa = PBXGroup;
+			children = (
+				A52CD72723FE841000F23118 /* Model */,
+				A52CD72623FE840700F23118 /* View */,
+				A52CD72523FE83FC00F23118 /* Presenter */,
+			);
+			path = DetailUserModule;
+			sourceTree = "<group>";
+		};
+		A52CD72523FE83FC00F23118 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A52CD72E23FE87FE00F23118 /* DetailUserPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		A52CD72623FE840700F23118 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A52CD72A23FE867500F23118 /* DetailUserViewController.swift */,
+				A52CD72B23FE867500F23118 /* DetailUserViewController.xib */,
+				A53E6C0D24090E1E000958A0 /* DetailUserViewController2.swift */,
+				A53E6C0E24090E1E000958A0 /* DetailUserViewController2.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A52CD72723FE841000F23118 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A52CD72823FE846400F23118 /* DetailUser.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A52CD73223FE8FB000F23118 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A52CD73323FE8FEB00F23118 /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		A532EB7423DF0B47002E99B8 = {
 			isa = PBXGroup;
 			children = (
@@ -143,9 +200,10 @@
 				A532EB8023DF0B47002E99B8 /* AppDelegate.swift */,
 				A532EB8223DF0B47002E99B8 /* SceneDelegate.swift */,
 				A5276E5E23EC548C002272B0 /* Builder */,
+				A52CD73223FE8FB000F23118 /* Router */,
 				A5F5607423DF25CE00EC2418 /* Services */,
 				A5276E5823EC3CD0002272B0 /* UsersListModule */,
-				A5F5607B23DF29CF00EC2418 /* Controller */,
+				A52CD72423FE834C00F23118 /* DetailUserModule */,
 				A532EB8E23DF0B4A002E99B8 /* Info.plist */,
 				A5FDD2AB23E04CCB00A432EC /* Support Files */,
 			);
@@ -176,14 +234,6 @@
 				A5276E4F23EC38F5002272B0 /* Cell */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		A5F5607B23DF29CF00EC2418 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				A5F5607C23DF2BAF00EC2418 /* UsersListVC.swift */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		A5FDD2AB23E04CCB00A432EC /* Support Files */ = {
@@ -267,6 +317,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A53E6C1024090E1E000958A0 /* DetailUserViewController2.xib in Resources */,
+				A52CD72D23FE867500F23118 /* DetailUserViewController.xib in Resources */,
 				A532EB8D23DF0B4A002E99B8 /* LaunchScreen.storyboard in Resources */,
 				A5276E5D23EC46AC002272B0 /* Main.storyboard in Resources */,
 				A5F5608123DF2D5000EC2418 /* UserslListTableViewCell.xib in Resources */,
@@ -326,11 +378,15 @@
 			files = (
 				A532EB8123DF0B47002E99B8 /* AppDelegate.swift in Sources */,
 				A5F5607623DF25FC00EC2418 /* NetworkService.swift in Sources */,
-				A5F5607D23DF2BAF00EC2418 /* UsersListVC.swift in Sources */,
 				A5276E6023EC54AB002272B0 /* ModuleBuilder.swift in Sources */,
 				A5F5607823DF268000EC2418 /* User.swift in Sources */,
+				A52CD73423FE8FEB00F23118 /* Router.swift in Sources */,
+				A52CD72923FE846400F23118 /* DetailUser.swift in Sources */,
+				A53E6C0F24090E1E000958A0 /* DetailUserViewController2.swift in Sources */,
 				A5276E5623EC3A07002272B0 /* UsersListViewController.swift in Sources */,
+				A52CD72C23FE867500F23118 /* DetailUserViewController.swift in Sources */,
 				A5276E5B23EC3D66002272B0 /* UsersListPresenter.swift in Sources */,
+				A52CD72F23FE87FE00F23118 /* DetailUserPresenter.swift in Sources */,
 				A532EB8323DF0B47002E99B8 /* SceneDelegate.swift in Sources */,
 				A5F5608023DF2D5000EC2418 /* UserslListTableViewCell.swift in Sources */,
 			);

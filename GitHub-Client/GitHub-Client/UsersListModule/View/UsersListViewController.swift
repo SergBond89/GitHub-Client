@@ -28,6 +28,10 @@ class UsersListViewController: UIViewController {
         setupTableView()
         presenter.usersListViewDidLoad()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
     
 }
 
@@ -86,5 +90,9 @@ extension UsersListViewController: UITableViewDataSource {
 }
 
 extension UsersListViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let login = presenter.getLogin(indexPath: indexPath)
+        presenter.tapOnTheUser(login: login)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
