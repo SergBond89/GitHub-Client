@@ -8,15 +8,25 @@
 
 import UIKit
 
-protocol Builder {
-    static func createUsersListVC() -> UIViewController
+protocol AssemblyBuilderProtocol {
+    func createUsersListModule(router: RouterProtocol) -> UIViewController
+    func createDetailUserModule(login: String, router: RouterProtocol) -> UIViewController
 }
 
-class ModuleBuilder: Builder {
-    static func createUsersListVC() -> UIViewController {
+class ModuleBuilder: AssemblyBuilderProtocol {
+    
+    func createUsersListModule(router: RouterProtocol) -> UIViewController {
         let view = UsersListViewController()
         let networkService = NetworkService()
-        let presenter = UsersListPresenter(view: view, networkService: networkService)
+        let presenter = UsersListPresenter(view: view, networkService: networkService, router: router)
+        view.presenter = presenter
+        return view
+    }
+    
+    func createDetailUserModule(login: String, router: RouterProtocol) -> UIViewController {
+        let view = DetailUserViewController()
+        let networkService = NetworkService()
+        let presenter = DetailUserPresenter(view: view, networkService: networkService, login: login, router: router)
         view.presenter = presenter
         return view
     }
